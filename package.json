@@ -1,0 +1,31 @@
+{
+  "name": "taller",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "eslint": "^4.19.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-combine-mq": "*",
+    "gulp-concat": "*",
+    "gulp-html-partial": "^1.0.1",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "4.0.2",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-zip": "*",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.4.0",
+    "run-sequence": "*"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
