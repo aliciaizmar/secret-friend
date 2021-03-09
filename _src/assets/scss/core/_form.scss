@@ -1,0 +1,90 @@
+.form-party {
+  input,
+  button {
+    font-family: $font-family;
+    @include font(1rem, 1.5);
+    color: $color-text;
+  }
+}
+
+.form {
+  &--input {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid 1px $color-gray-rock;
+  }
+}
+
+.dateparty,
+.moneyparty {
+  @include d-flex(flex, null, center);
+  margin-bottom: 15px;
+
+  input {
+    width: 100%;
+  }
+}
+
+.module {
+  &__people--list {
+    @include d-flex(flex, null, null);
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .input--label {
+      position: absolute;
+      overflow: hidden;
+      position: absolute;
+      width: 1px;
+    }
+
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .remove-people {
+      border: 0;
+      background: 0;
+      width: 2.1875rem;
+      margin-left: auto;
+
+      .icon {
+        width: 35px;
+      }
+    }
+  }
+}
+
+.btn {
+  border: 0;
+  background: 0;
+  width: 2.1875rem;
+
+  &.addpeople {
+    margin-left: auto;
+  }
+
+  &.create-event {
+    margin-bottom: 100px;
+    background: purple;
+    color: $color-white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.error {
+  color: $color-error;
+  background-color: #fbe7e5;
+  font-style: italic;
+}
+
+.error--input {
+  border: solid $color-error 2px;
+  background: #fbe7e5;
+}
