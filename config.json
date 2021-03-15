@@ -19,7 +19,9 @@
 		"src": [
 			"_src/assets/js/main.js",
       "_src/assets/js/create-friend.js",
-      "_src/assets/js/update-friend.js"
+      "_src/assets/js/update-friend.js",
+      "_src/assets/js/remove-btn.js",
+      "_src/assets/js/fetch.js"
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"
