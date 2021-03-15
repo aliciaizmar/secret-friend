@@ -1,3 +1,5 @@
+
+/*** Update friends ***/
 'use strict';
 
 function updateFriendIds(currentList, posId) {
@@ -15,9 +17,6 @@ function updateFriendIds(currentList, posId) {
     });
     setAttributes(currentList[i].querySelector('.email'), {
       id: `emailpeople-${posId}`,
-    });
-    setAttributes(currentList[i].querySelector('.remove-people'), {
-      id: `btnpeople-${posId}`,
     });
     posId++;
   }
