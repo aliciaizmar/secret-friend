@@ -1,66 +1,43 @@
-<main>
-  <div class="container__module bg-white">
-    <div class="container">
-      <h1 class="content__title--h1">¡Hola!</h1>
-      <p>
-        Secret Friend es una app online para organizar regalos entre amigos,
-        compañeros de trabajo, etc.
-      </p>
-
-      <p class="content__steps">Son solo tres pasos:</p>
-      <ul class="content__init--list">
-        <li class="content__init--item">
-          <!-- <img class="icon" src="assets/images/svg/1.svg" alt="Número 1" /> -->
-          Elige fecha de la reunión y el importe
-        </li>
-        <li class="content__init--item">
-          <!-- <img class="icon" src="assets/images/svg/2.svg" alt="Número 2" /> -->
-          Añade el nombre y el email de los participantes
-        </li>
-        <li class="content__init--item">
-          <!-- <img class="icon" src="assets/images/svg/3.svg" alt="Número 3" /> -->
-          Crea el evento
-        </li>
-      </ul>
-    </div>
-  </div>
-  <form name="form-party" class="form-party" action="" method="">
+<form name="form-party" class="form-party">
     <div class="container__module bg-gray">
       <div class="container">
         <h2 class="content__title--h2">Elige la fecha y el importe</h2>
 
-        <div class="dateparty">
-          <img class="icon icon--input" src="assets/images/svg/calendar.svg" alt="Calendario">
-          <input
-            type="date"
-            required="required"
-            id="dateparty"
-            name="dateparty"
-            class="form--input"
-          />
-          <div class="error"></div>
-        </div>
-
-        <div class="moneyparty">
-          <img class="icon icon--input" src="assets/images/svg/money-bag.png" alt="Importe">
-          <input
-            type="text"
-            id="moneyparty"
-            name="moneyparty"
-            required="required"
-            class="form--input"
-            value="50"
-          />
-          <div class="error"></div>
+        <div class="pick__data">
+          <div class="dateparty">
+            <img class="icon icon--input" src="assets/images/svg/calendar.svg" alt="Calendario">
+            <input
+              type="date"
+              required="required"
+              id="dateparty"
+              name="dateparty"
+              class="form--input"
+            />
+            <div class="error"></div>
+          </div>
+  
+          <div class="moneyparty">
+            <img class="icon icon--input" src="assets/images/svg/money-bag.png" alt="Importe">
+            <input
+              type="text"
+              id="moneyparty"
+              name="moneyparty"
+              required="required"
+              class="form--input"
+              value="50"
+            />
+            <div class="error"></div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="container__module">
       <div class="container">
-        <h2 class="content__title--h2">Añade los participantes</h2>
+        <h2 class="content__title--h2">Gente invitada</h2>
         <ul class="module__people">
           <li class="module__people--list">
+            <h3 class="list-organizer">Soy quien organiza la fiesta</h3>
             <div class="namepeople">
               <label class="input--label name--label" for="namepeople-1"
                 >Nombre</label
@@ -73,6 +50,7 @@
                 placeholder="Name"
                 class="form--input name"
               />
+              <div class="error"></div>
             </div>
 
             <div class="emailpeople">
@@ -87,9 +65,10 @@
                 placeholder="Email"
                 class="form--input email"
               />
+              <div class="error"></div>
             </div>
 
-            <button type="button" class="btn remove-people disabled">
+            <button type="button" class="btn remove-people">
             </button>
           </li>
 
@@ -106,6 +85,7 @@
                 placeholder="Name"
                 class="form--input name"
               />
+              <div class="error"></div>
             </div>
 
             <div class="emailpeople">
@@ -120,9 +100,10 @@
                 placeholder="Email"
                 class="form--input email"
               />
+              <div class="error"></div>
             </div>
 
-            <button type="button" class="btn remove-people disabled">
+            <button type="button" class="btn remove-people">
               <img class="icon icon--input" src="assets/images/svg/trash.svg" alt="Eliminar">
             </button>
           </li>
@@ -140,6 +121,7 @@
                 placeholder="Name"
                 class="form--input name"
               />
+              <div class="error"></div>
             </div>
 
             <div class="emailpeople">
@@ -154,18 +136,20 @@
                 placeholder="Email"
                 class="form--input email"
               />
+              <div class="error"></div>
             </div>
 
-            <button type="button" class="btn remove-people disabled">              
+            <button type="button" class="btn remove-people">              
               <img class="icon icon--input" src="assets/images/svg/trash.svg" alt="Eliminar">
             </button>
           </li>
         </ul>
-        <button type="button" class="btn addpeople">
+        <button type="button" class="btn addpeople">          
           <img class="icon icon--input" src="assets/images/svg/plus.svg" alt="Añadir participantes">
+          <span>Añade amig@s</span>
         </button>
         <div class="error errorfriend"></div>
-        <div class="error errorinputs"></div>
+        <div class="error errorinputs"></div>      
       </div>
     </div>
     <div class="container__module bg-gray">
@@ -175,4 +159,3 @@
       
     </div>
   </form>
-</main>

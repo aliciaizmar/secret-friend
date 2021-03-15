@@ -16,13 +16,25 @@
   }
 }
 
+.pick__data {
+  @include d-flex(flex, space-between, null);
+  flex-direction: column;
+}
+
 .dateparty,
 .moneyparty {
-  @include d-flex(flex, null, center);
   margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 60px auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "icon input input"
+    ". error error";
 
   input {
     width: 100%;
+    height: 50px;
+    grid-area: input;
   }
 }
 
@@ -31,6 +43,11 @@
     @include d-flex(flex, null, null);
     flex-direction: column;
     margin-bottom: 40px;
+
+    .list-organizer {
+      margin-bottom: 10px;
+      @include font(1rem, null);
+    }
 
     .input--label {
       position: absolute;
@@ -41,7 +58,6 @@
 
     input {
       width: 100%;
-      margin-bottom: 10px;
     }
 
     .remove-people {
@@ -54,21 +70,32 @@
         width: 35px;
       }
     }
+
+    &:first-child {
+      background: $color-extra;
+      padding: 10px 10px 4px;
+      border-radius: 10px;
+      color: $color-white;
+    }
   }
 }
 
 .btn {
   border: 0;
   background: 0;
-  width: 2.1875rem;
+  width: auto;
+  cursor: pointer;
 
   &.addpeople {
-    margin-left: auto;
+    @include d-flex(flex, flex-start, center);
+    text-transform: uppercase;  
+    margin-bottom: 20px;
+    font-weight: 700; 
   }
 
   &.create-event {
     margin-bottom: 100px;
-    background: purple;
+    background: $color-purple;
     color: $color-white;
     width: 100%;
     padding: 10px;
@@ -79,12 +106,38 @@
 }
 
 .error {
-  color: $color-error;
-  background-color: #fbe7e5;
+  color: $color-error;  
   font-style: italic;
+  grid-area: error;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 10px;
+
+  &inputs,
+  &friend {
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-align: right;
+  }
 }
+
 
 .error--input {
   border: solid $color-error 2px;
-  background: #fbe7e5;
+  background: #fbe7e5;  
+}
+
+@media only screen and (min-width: 992px) {
+  .pick__data {
+    flex-direction: row;
+  }
+
+  .dateparty, .moneyparty {
+    grid-template-columns: 60px 10em 10em; 
+  }
+
+  .btn {
+    &.create-event {
+      font-size: 1.5625rem;
+    }
+  }
 }

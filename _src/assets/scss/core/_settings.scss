@@ -1,9 +1,11 @@
-$font-family: "Open Sans", sans-serif;
-$color-text: #333333;
-$color-white: #ffffff;
-$color-gray: #cdcdcf;
-$color-error: #9e160d;
-$color-gray-rock: #b1afaf;
+$font-family:         "Open Sans", sans-serif;
+$color-text:        #333333;
+$color-white:       #ffffff;
+$color-gray:        #cdcdcf;
+$color-error:       #9e160d;
+$color-gray-rock:   #b1afaf;
+$color-extra:       #79a8fe;
+$color-purple:      #800080;
 
 @mixin d-flex($display, $justify, $align) {
   display: $display;

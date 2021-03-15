@@ -44,7 +44,6 @@ body {
 
 .container {
   flex-direction: column;
-  //@include d-flex(flex, center, center);
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -108,10 +107,22 @@ body {
 
 @media only screen and (min-width: 992px) {
   .container {
+    max-width: 900px;
+
     &__module {
       padding: 2.5rem;
     }
+    
+    .content {
+      &__title {        
+  
+        &--h2 {
+          font-size: 1.5625rem;
+        }
+      }
+    }
 
-    max-width: 950px;
   }
 }
+
+
