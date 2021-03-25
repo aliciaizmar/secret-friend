@@ -2,9 +2,7 @@
 /*** Update friends ***/
 'use strict';
 
-function updateFriendIds(currentList, posId) {
-  posId = 1;
-
+function updateFriendIds(currentList, posId = 1) {
   for (let i = 0; i < currentList.length; i++) {
     setAttributes(currentList[i].querySelector('.name--label'), {
       for: `namepeople-${posId}`,
@@ -18,6 +16,7 @@ function updateFriendIds(currentList, posId) {
     setAttributes(currentList[i].querySelector('.email'), {
       id: `emailpeople-${posId}`,
     });
+    currentList[i].lastElementChild.dataset.index = i;
     posId++;
   }
 }

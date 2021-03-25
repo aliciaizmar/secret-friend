@@ -2,9 +2,9 @@
 /*** Create friend ***/
 'use strict';
 
-function createFriend() {
-  posId++;
-  const frienContent = document.querySelector('.module__people');  
+function createFriend(posId =+1) {
+  const frienContent = document.querySelector('.module__people');
+  const errorFriend = document.querySelector('.errorfriend');
 
   const createListEl = ({
     itemName,
@@ -14,9 +14,11 @@ function createFriend() {
     classes1,
     classes2,
   }) => {
+    const ul = document.getElementById('list');
+    const lastIndex = parseInt(ul.lastElementChild.lastElementChild.dataset.index);
     const friendLi = document.createElement('li');
     friendLi.setAttribute('class', 'module__people--list');
-    friendLi.innerHTML = 
+    friendLi.innerHTML =
     `<div class="${itemName}">
         <label class="input--label name--label" for="${itemName}-${posId}">${textName}</label>
         <input type="text" id="${itemName}-${posId}" name="${itemName}" required="required" placeholder="${textName}" class="form--input ${classes1}">
@@ -29,7 +31,7 @@ function createFriend() {
         <div class="error"></div>
     </div>
 
-    <button type="button" class="btn remove-people"> 
+    <button type="button" class="btn remove-people" data-index="${lastIndex + 1}"> 
       <img class="icon icon--input" src="assets/images/svg/trash.svg" alt="Eliminar">
     </button>`;
 
@@ -51,9 +53,9 @@ function createFriend() {
 
   // updateFriendIds when delete one/multiples and add another
   let currentList = document.querySelectorAll('.module__people--list');
-  
+
   for (let i = 0; i < currentList.length; i++) {
     updateFriendIds(currentList);
-    errorFriend.innerHTML = '';
+    errorFriend.innerText = '';
   }
 }

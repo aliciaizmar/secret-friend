@@ -17,11 +17,15 @@
 	},
 	"js": {
 		"src": [
-			"_src/assets/js/main.js",
+      "_src/assets/js/main.js",		
       "_src/assets/js/create-friend.js",
       "_src/assets/js/update-friend.js",
-      "_src/assets/js/remove-btn.js",
-      "_src/assets/js/fetch.js"
+      "_src/assets/js/validate-fields.js",
+      "_src/assets/js/fetch.js",
+      "_src/assets/js/isComplete.js",
+      "_src/assets/js/reset-fields.js",
+      "_src/assets/js/create-event.js"
+      
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"

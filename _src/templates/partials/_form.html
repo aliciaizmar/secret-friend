@@ -24,7 +24,6 @@
               name="moneyparty"
               required="required"
               class="form--input"
-              value="50"
             />
             <div class="error"></div>
           </div>
@@ -35,7 +34,7 @@
     <div class="container__module">
       <div class="container">
         <h2 class="content__title--h2">Gente invitada</h2>
-        <ul class="module__people">
+        <ul class="module__people" id="list">
           <li class="module__people--list">
             <h3 class="list-organizer">Soy quien organiza la fiesta</h3>
             <div class="namepeople">
@@ -103,7 +102,7 @@
               <div class="error"></div>
             </div>
 
-            <button type="button" class="btn remove-people">
+            <button type="button" class="btn remove-people" data-index="1">
               <img class="icon icon--input" src="assets/images/svg/trash.svg" alt="Eliminar">
             </button>
           </li>
@@ -139,7 +138,7 @@
               <div class="error"></div>
             </div>
 
-            <button type="button" class="btn remove-people">              
+            <button type="button" class="btn remove-people" data-index="2">              
               <img class="icon icon--input" src="assets/images/svg/trash.svg" alt="Eliminar">
             </button>
           </li>

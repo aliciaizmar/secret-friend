@@ -8,18 +8,13 @@ function removeBtn() {
   const btnRemoveFriend = document.querySelectorAll('.remove-people');
 
   btnRemoveFriend.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const currBtn = e.currentTarget;
+    btn.addEventListener('click', () => {
       const currentList = document.querySelectorAll('.module__people--list');
 
       for (let i = 0; i < currentList.length; i++) {
-        currentList.length > 3
-          ? currBtn.parentElement.remove()
-          : errorFriend.innerText = errorTexts.errorFriend;
-
         updateFriendIds(currentList);
       }
     });
   });
 }
-setInterval(removeBtn, 1000);
+// setInterval(removeBtn, 1000);

@@ -2,12 +2,17 @@
 //@import "core/fonts";
 @import "core/form";
 @import "core/images";
+@import "core/create";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
 }
 
 a {
@@ -43,7 +48,6 @@ body {
 }
 
 .container {
-  flex-direction: column;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
