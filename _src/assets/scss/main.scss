@@ -1,132 +1,130 @@
-@import "core/settings";
-//@import "core/fonts";
-@import "core/form";
-@import "core/images";
-@import "core/create";
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import 'core/settings';
+@import 'core/header';
+@import 'core/form';
+@import 'core/images';
+@import 'core/create';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .wrapper {
-  position: relative;
+    position: relative;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 ul,
 li {
-  list-style: none;
-  list-style-type: none;
+    list-style: none;
+    list-style-type: none;
 }
 
 a,
 img {
-  display: block;
+    display: block;
 }
 
 p {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 body {
-  @include font(1rem, 1.4);
-  font-weight: normal;
-  background: $color-white;
-  color: $color-text;
-  min-height: 100vh;
-  font-family: $font-family;
-  text-align: left;
-
-  //background: linear-gradient(90deg, #ffffff 50%, #11af92 50%);
+    @include font(1rem, 1.4);
+    font-weight: normal;
+    background: $color-white;
+    color: $color-text;
+    min-height: 100vh;
+    font-family: $font-family;
+    text-align: left;
 }
 
 .container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  @include font(1rem, 1.5);
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    @include font(1rem, 1.5);
 
-  &__module {
-    padding: 1.5rem;
+    .content {
+        &__title {
+            &--h1 {
+                @include font(2.5rem, null);
+                font-weight: 700;
+            }
 
-    &--logo {
-      margin: 0 auto;
-      width: 9.375rem;
-    }
-  }
-
-  .content {
-
-    &__title {
-      &--h1 {
-        @include font(2.5rem, null);
-        font-weight: 700;
-      }
-
-      &--h2 {
-        @include font(1.125rem, null);
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-    }
-
-    &__init {
-      &--list {
-        padding: 20px 0;
-        @include d-flex(flex, space-between, null);
-        flex-direction: column;
-      }
-
-      &--item {
-        @include d-flex(flex, null, center);
-        margin-bottom: 1.875rem;
-
-        &:last-child {
-          margin-bottom: 0;
+            &--h2 {
+                @include font(1.125rem, null);
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
         }
-      }
-    }
 
-    &__steps {
-      font-weight: 700;
-      @include font(1.125rem, null);
+        &__init {
+            &--list {
+                @include d-flex(flex, space-between, null);
+                flex-direction: column;
+            }
+
+            &--item {
+                @include d-flex(flex, null, center);
+                margin-bottom: 1.875rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__steps {
+            font-weight: 700;
+            @include font(1.125rem, null);
+        }
     }
-  }
 }
 
 .bg-white {
-  background: $color-white;
+    background: $color-white;
 }
 
 .bg-gray {
-  background: $color-gray;
+    background: $color-gray;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        .content {
+            &__init {
+                &--list {
+                  display: grid;
+                  grid-template-columns: 32% 32% 30%;
+                  column-gap: 2%;
+                  align-items: flex-start;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 992px) {
-  .container {
-    max-width: 900px;
+    .container {
+        max-width: 900px;
 
-    &__module {
-      padding: 2.5rem;
-    }
-    
-    .content {
-      &__title {        
-  
-        &--h2 {
-          font-size: 1.5625rem;
+        &__module {
+            padding: 2.5rem;
         }
-      }
+
+        .content {
+            &__title {
+                &--h2 {
+                    font-size: 1.5625rem;
+                }
+            }
+        }
     }
-
-  }
 }
-
-

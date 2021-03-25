@@ -5,7 +5,7 @@
 function isCompleteAndSend() {
   getData('', formData)
     .then((response) => {
-      if (response.ok) {
+      if (!response.ok) {
         const message = `Ok: ${response.status}`;
         console.log('message', message);
         createEvent();

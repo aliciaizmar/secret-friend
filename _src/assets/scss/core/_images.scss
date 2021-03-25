@@ -1,6 +1,7 @@
 .icon {
-    width: 100px;
+    width: 4.375rem;
     height: auto;
+    margin-right: 10px;
 
     &.icon--input {
         width: 50px;
@@ -8,3 +9,10 @@
         grid-area: icon;
     }
 }
+
+.content {
+    &___evento-creado--img {
+        width: 50%;
+    }
+}
+

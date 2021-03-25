@@ -15,7 +15,7 @@ function createFriend(posId =+1) {
     classes2,
   }) => {
     const ul = document.getElementById('list');
-    const lastIndex = parseInt(ul.lastElementChild.lastElementChild.dataset.index);
+    const lastIndex = parseInt(ul.lastElementChild.querySelector('.remove-people').dataset.index);
     const friendLi = document.createElement('li');
     friendLi.setAttribute('class', 'module__people--list');
     friendLi.innerHTML =
@@ -31,23 +31,19 @@ function createFriend(posId =+1) {
         <div class="error"></div>
     </div>
 
-    <button type="button" class="btn remove-people" data-index="${lastIndex + 1}"> 
-      <img class="icon icon--input" src="assets/images/svg/trash.svg" alt="Eliminar">
-    </button>`;
+    <img class="icon icon--input remove-people" src="assets/images/svg/trash.svg" alt="Eliminar" data-index="${lastIndex + 1}">`;
 
     return friendLi;
   };
 
-  const listEl = [
-    {
-      itemName: 'namepeople',
-      itemEmail: 'emailpeople',
-      textName: 'Nombre',
-      textEmail: 'Email',
-      classes1: 'name',
-      classes2: 'email',
-    },
-  ];
+  const listEl = [{
+    itemName: 'namepeople',
+    itemEmail: 'emailpeople',
+    textName: 'Nombre',
+    textEmail: 'Email',
+    classes1: 'name',
+    classes2: 'email',
+  }];
 
   listEl.forEach((item) => frienContent.append(createListEl(item)));
 

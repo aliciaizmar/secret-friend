@@ -1,3 +1,11 @@
-.header {
-	width: 100%;	
+.container {
+    &__module {
+        padding: 1.5rem;
+
+        &--logo {
+            margin: 0 auto;
+            width: 9.375rem;
+            padding: 20px 0;
+        }
+    }
 }

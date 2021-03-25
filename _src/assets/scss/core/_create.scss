@@ -19,18 +19,22 @@
             left: auto;
             margin: 0 auto;
             padding: 50px 30px;
+            border-radius: 15px;
         }
 
         &--img {
             order: 1;
         }
 
-        .content__title--h1 {
-            text-align: center;
-            text-transform: uppercase;
-            line-height: 1.2;
-            order: 2;
-            margin: 20px 0 40px;
+        .container {
+            .content__title--h1 {
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 1.2;
+                order: 2;
+                margin: 20px 0 40px;
+                font-size: 1.5rem;
+            }
         }
 
         .create-event {

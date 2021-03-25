@@ -65,8 +65,9 @@
       background: 0;
       width: 2.1875rem;
       margin-left: auto;
+      cursor: pointer;
 
-      .icon {
+      &.icon {
         width: 35px;
       }
     }
