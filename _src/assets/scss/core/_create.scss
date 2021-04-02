@@ -1,5 +1,10 @@
 .content {
-    &___evento-creado {
+    &__evento {
+        opacity: 0;
+        transition: all ease-in-out 1s;
+    }
+
+    &__evento-creado {
         background: rgba(0, 0, 0, 0.5);
         position: fixed;
         left: 0;
@@ -9,10 +14,10 @@
         min-height: 100vh;
         @include d-flex(flex, center, center);
         flex-direction: column;
-        display: none;
+        
 
         .content--color {
-            background-color: $color-extra;
+            background-color: $color-extra-create;
             @include d-flex(flex, center, center);
             flex-direction: column;
             width: 85%;
@@ -24,6 +29,7 @@
 
         &--img {
             order: 1;
+            width: 50%;
         }
 
         .container {
@@ -32,8 +38,14 @@
                 text-transform: uppercase;
                 line-height: 1.2;
                 order: 2;
-                margin: 20px 0 40px;
+                margin: 20px 0;
                 font-size: 1.5rem;
+            }
+
+            .content__text {
+                order: 3;
+                margin-bottom: 40px;
+                text-align: center;
             }
         }
 
@@ -45,5 +57,5 @@
 }
 
 .show--create {
-    display: flex;
+    opacity: 1;
 }

@@ -21,6 +21,10 @@
   flex-direction: column;
 }
 
+.dateparty input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
 .dateparty,
 .moneyparty {
   margin-bottom: 15px;

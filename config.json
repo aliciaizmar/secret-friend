@@ -22,7 +22,7 @@
       "_src/assets/js/update-friend.js",
       "_src/assets/js/validate-fields.js",
       "_src/assets/js/fetch.js",
-      "_src/assets/js/isComplete.js",
+      "_src/assets/js/complete.js",
       "_src/assets/js/reset-fields.js",
       "_src/assets/js/create-event.js"
       

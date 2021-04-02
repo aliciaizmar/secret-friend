@@ -30,21 +30,18 @@ btnAddFriend.addEventListener('click', () => {
 
 ulFormList.addEventListener('click', (event) => {
   event.stopPropagation();
-  event.preventDefault();
   const indexToDelete = event.target.dataset.index;
-  const childToRemove = ulFormList.children[indexToDelete];
+  const childToRemove = ulFormList.children[indexToDelete];  
 
   //A partir de tres amigos se pueden borras los inputs
-  if (ulFormList.children.length > 3 && childToRemove) {   
+  if (ulFormList.children.length > 3 && childToRemove) {  
     childToRemove.remove();
     updateFriendIds(ulFormList.children);
         
-  } else if (event.target.className.includes('icon') && indexToDelete) {    
+  } else if (event.target.className.includes('remove-people')) {
     errorFriend.innerText = errorTexts.errorFriend;
 
   } else {
     errorFriend.innerText = '';
   }
 });
-
-
