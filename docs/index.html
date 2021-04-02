@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Secret Friend</title>
+        <link rel="icon" href="favicon.png" />
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <header class="header bg-gray">
+                <div class="container">
+                    <img class="container__module--logo" src="assets/images/secret-friend.png"
+                    alt="Logo Secret Friend" />
+                </div>
+            </header>
+            <main>
+                <div class="container__module bg-white">
+                    <div class="container">
+                         <h1 class="content__title--h1">¡Hola!</h1>
+
+                        <p>Secret Friend es una app online para organizar regalos entre amistades,
+                            compis de trabajo, etc.</p>
+                        <ul class="content__init--list">
+                            <li class="content__init--item">
+                                <img class="icon" src="assets/images/svg/1.svg" alt="Número 1" />Elige fecha de la reunión y el importe</li>
+                            <li class="content__init--item">
+                                <img class="icon" src="assets/images/svg/2.svg" alt="Número 2" />Añade el nombre y el email de tus amistades</li>
+                            <li class="content__init--item">
+                                <img class="icon" src="assets/images/svg/3.svg" alt="Número 3" />Crea el evento</li>
+                        </ul>
+                    </div>
+                </div>
+                <form name="form-party" class="form-party">
+                    <div class="container__module bg-gray">
+                        <div class="container">
+                             <h2 class="content__title--h2">Elige la fecha y el importe</h2>
+
+                            <div class="pick__data">
+                                <div class="dateparty">
+                                    <img class="icon icon--input" src="assets/images/svg/calendar.svg" alt="Calendario">
+                                    <input type="date" required="required" id="dateparty" name="dateparty"
+                                    class="form--input" />
+                                    <div class="error"></div>
+                                </div>
+                                <div class="moneyparty">
+                                    <img class="icon icon--input" src="assets/images/svg/money-bag.svg" alt="Importe">
+                                    <input type="text" id="moneyparty" name="moneyparty" required="required"
+                                    class="form--input" />
+                                    <div class="error"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__module">
+                        <div class="container">
+                             <h2 class="content__title--h2">Gente invitada</h2>
+
+                            <ul class="module__people" id="list">
+                                <li class="module__people--list">
+                                     <h3 class="list-organizer">Soy quien organiza la fiesta</h3>
+
+                                    <div class="namepeople">
+                                        <label class="input--label name--label" for="namepeople-1">Nombre</label>
+                                        <input type="text" id="namepeople-1" name="namepeople" required="required"
+                                        placeholder="Nombre" class="form--input name" />
+                                        <div class="error"></div>
+                                    </div>
+                                    <div class="emailpeople">
+                                        <label class="input--label email--label" for="emailpeople-1">Email</label>
+                                        <input type="email" id="emailpeople-1" name="emailpeople"
+                                        required="required" placeholder="Email" class="form--input email" />
+                                        <div class="error"></div>
+                                    </div>
+                                    <button type="button" class="btn remove-people"></button>
+                                </li>
+                                <li class="module__people--list">
+                                    <div class="namepeople">
+                                        <label class="input--label name--label" for="namepeople-2">Nombre</label>
+                                        <input type="text" id="namepeople-2" name="namepeople" required="required"
+                                        placeholder="Nombre" class="form--input name" />
+                                        <div class="error"></div>
+                                    </div>
+                                    <div class="emailpeople">
+                                        <label class="input--label email--label" for="emailpeople-2">Email</label>
+                                        <input type="email" id="emailpeople-2" name="emailpeople"
+                                        required="required" placeholder="Email" class="form--input email" />
+                                        <div class="error"></div>
+                                    </div>
+                                    <img class="icon icon--input remove-people" src="assets/images/svg/trash.svg"
+                                    alt="Eliminar" data-index="1">
+                                </li>
+                                <li class="module__people--list">
+                                    <div class="namepeople">
+                                        <label class="input--label name--label" for="namepeople-3">Nombre</label>
+                                        <input type="text" id="namepeople-3" name="namepeople" required="required"
+                                        placeholder="Nombre" class="form--input name" />
+                                        <div class="error"></div>
+                                    </div>
+                                    <div class="emailpeople">
+                                        <label class="input--label email--label" for="emailpeople-3">Email</label>
+                                        <input type="email" id="emailpeople-3" name="emailpeople"
+                                        required="required" placeholder="Email" class="form--input email" />
+                                        <div class="error"></div>
+                                    </div>
+                                    <img class="icon icon--input remove-people" src="assets/images/svg/trash.svg"
+                                    alt="Eliminar" data-index="2">
+                                </li>
+                            </ul>
+                            <button type="button" class="btn addpeople">
+                                <img class="icon icon--input" src="assets/images/svg/plus.svg" alt="Añadir participantes"> <span>Añade amig@s</span>
+
+                            </button>
+                            <div class="error errorfriend"></div>
+                            <div class="error errorinputs"></div>
+                        </div>
+                    </div>
+                    <div class="container__module bg-gray">
+                        <div class="container">
+                            <button class="btn create-event" id="btnsend" type="submit">Crear el evento</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="content__evento"></div>
+            </main>
+            <footer></footer>
+        </div>
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
